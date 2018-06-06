@@ -1,0 +1,91 @@
+/* Create your tests here using either this, or a custom, JSON format
+ * The JSON blob is imported in the HTML, making it accessible to our JS files
+ *
+ * Below are two examples 
+*/
+
+quizBlobs = {
+  "goOut": {
+    "title": "Should you go to the event tonight?",
+    "type": "text",
+    "prompts": [
+      {
+        "promptText": "Are you tired?",
+        "trueResponse": "Yes",
+        "falseResponse": "No Way",
+      },
+      {
+        "promptText": "Is the event important?",
+        "trueResponse": "To me it is",
+        "falseResponse": "Nah",
+      },
+    ],
+    "results": {
+      "trueTheshold": 1,
+      "true": "You should go out and have a blast!",
+      "false": "You should stay in and relax. You deserve.",
+    },
+  },
+  "useAnimations": {
+    "title": "Should you jazz up your app with css animations?",
+    "type": "text",
+    "prompts": [
+      {
+        "promptText": "Do you appreciate pizzazz?",
+        "trueResponse": "Naturally",
+        "falseResponse": "Is that pizza?",
+      },
+      {
+        "promptText": "Are humans using your app?",
+        "trueResponse": "100% Organic",
+        "falseResponse": "1100 0010",
+      },
+      {
+        "promptText": "Could you use practice with CSS?",
+        "trueResponse": "Always!",
+        "falseResponse": "I am already one with stylesheets.",
+      },
+      {
+        "promptText": "Do things moving on the screen make for a better experience?",
+        "trueResponse": "Only every time.",
+        "falseResponse": "I have vertigo, so no.",
+      },
+    ],
+    "results": {
+      "trueTheshold": 1,
+      "true": "Get out there and implement those animations! Check out @keyframes for starters.",
+      "false": "Stylesheets are for humans. Unformatted text is for you.",
+    }
+  },
+  "hogNames": {
+    "title": "Which hog is which?",
+    "type": "img",
+    "prompts": [
+      {
+        "promptText": "Truffle Shuffle",
+        "trueResponse": "url(data/imgs/truffleshuffle.jpg)",
+        "falseResponse": "url(data/imgs/trouble.jpg)",
+      },
+      {
+        "promptText": "Rainbow Dash",
+        "trueResponse": "url(data/imgs/rainbowdash.jpg)",
+        "falseResponse": "url(data/imgs/sobriety.jpg)",
+      },
+      {
+        "promptText": "Galaxy S Note 7",
+        "trueResponse": "url(data/imgs/galaxy_note.jpg)",
+        "falseResponse": "url(data/imgs/mudblood.jpg)",
+      },
+      {
+        "promptText": "Cherub",
+        "trueResponse": "url(data/imgs/cherub.jpg)",
+        "falseResponse": "url(data/imgs/bay_of_pigs.jpg)",
+      },
+    ],
+    "results": {
+      "trueTheshold": 1,
+      "true": "Get out there and implement those animations! Check out @keyframes for starters.",
+      "false": "Stylesheets are for humans. Unformatted text is for you.",
+    }
+  }
+}
