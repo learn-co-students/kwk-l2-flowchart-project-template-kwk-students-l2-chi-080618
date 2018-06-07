@@ -48,10 +48,12 @@ body, div {
   width: 80%;
   height: 35%;
   box-shadow: 2px 2px 0px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
 #next-quiz-button:hover {
   box-shadow: inset 2px 2px 0px 4px rgba(0,0,0,0.3);
+  
 }
 
 #title {
@@ -75,13 +77,13 @@ body, div {
 }
 
 .option {
-  font-size: 40pt;
+  font-size: 30pt;
   width: 45%;
   height: 100%;
   box-shadow: 2px 2px 0px 3px rgba(0,0,0,0.3);
   cursor: pointer;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .option:hover {

@@ -84,8 +84,8 @@ quizBlobs = {
     ],
     "results": {
       "trueTheshold": 1,
-      "true": "Get out there and implement those animations! Check out @keyframes for starters.",
-      "false": "Stylesheets are for humans. Unformatted text is for you.",
+      "true": "Wow! You are a hog master! Go attend those county fairs.",
+      "false": "You need to sharpen up on your swine saviness.",
     }
   }
 }
