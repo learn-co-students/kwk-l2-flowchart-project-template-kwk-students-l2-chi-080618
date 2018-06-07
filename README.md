@@ -23,7 +23,7 @@ For now, don't worry about the content or domain of your flow chart, you first h
 
 As usual, we don't want you spending too much time wrestling with the basic HTML or CSS: `index.css` and `index.html` have been populated with everything you may need to get a simple implementation working (with you just needing to program the JavaScript). That being said, this is your final project and you should take the initiative to make it look, and function, however you like! Think of the base code provided here to be only an outline, and use it as a jumping off point. 
 
-We have provided you with sample JavaScript code located in the `src/`. You will notice we have two files, which we use to split up responsibility (both are being imported in `index.html`):
+We have provided you with sample JavaScript code located in the `src/` directory. You will notice we have two files, which we use to split up responsibility (both are being imported in `index.html`):
 
 `src/domAdapter.js` contains our functions that do the actual _changing_ of the DOM. For example, `updatePrompt(str)` takes in a string as an argument and replaces the prompt `<div>`'s contents with that string. You will notice that there are **no** functions in `domAdapter.js` that handle the actual quizzing application logic!
 
@@ -32,7 +32,7 @@ We have provided you with sample JavaScript code located in the `src/`. You will
 
 #### Using the JSON Data
 
-As mentioned, the JSON file is the source of our actual quiz content, and `quizzer.js` is what is responsible for managing the delivery of that content (i.e. the quizzes themselves). If you look at the the first line in `quizzer.js`, you will see that we are grabbing all of the quiz objects from our JSON and placing them in an array (the function `Object.values(obj)` simply ignores the keys of an object and places all of the values into an array). For example:
+As mentioned, the JSON file is the source of our actual quiz content, and `quizzer.js` is responsible for managing the delivery of that content (i.e. the quizzes themselves). If you look at the first line in `quizzer.js`, you will see that we are grabbing all of the quiz objects from our JSON and placing them in an array. The function `Object.values(obj)` simply ignores the keys of an object and places all of the values into an array. For example:
 
 ```js
 myObj = {
@@ -50,9 +50,13 @@ Using this, we can have a neat array of quiz objects that have all the data we n
 
 ## Getting Started
 
-We have provided only one basic implementation of this quiz idea. In our example, we check if the amount of 'true' responses for the quiz are greater than the 'trueThreshold'. When then display a result based on that. As it currently stands, our application functions similar to a pass/not-pass quiz. The user either selects enough 'true' answers, (or not), and a result is given based on that. As you can see, the starter code isn't a true implementation of a decision tree. It always asks the same amount of questions, and answering one way won't change the questions that follow. 
+We have provided only one basic implementation of this flowchart idea. In our example, we check if the amount of 'true' responses for the prompts are greater than the 'trueThreshold' and then display a result accordingly. 
 
-Take a moment to run the code as is by opening `index.html`. For every event that you see or engage with on the DOM, go back to the code in `quizzer.js` and see what function it is controlling the user experience.
+As it currently stands, our application functions similar to a pass/not-pass quiz. The user either selects enough 'true' answers, (or not), and a result is given based on that. 
+
+As you can see, the starter code isn't a true implementation of a decision tree. It always asks the same amount of questions, and answering one way or another won't change the questions that follow. 
+
+Take a moment to run the code as is by opening `index.html`. For every event that you see or engage with on the DOM, go back to the code in `quizzer.js` and see what function it is controlling your user experience.
 
 
 ## Your Job
@@ -91,6 +95,10 @@ Tally up the amount of correct answers and provide the user with a percentage sc
 Instead of having a user select a specific image based only on a text prompt, lookup how to use an [HTML `<audio>` tag][audio] and play a sound when a prompt is updated (i.e. a lion's roar), and have them guess which answer prompt the sound is associated with (i.e. lion or tiger). 
 
 ---
+
+## Most Importantly
+
+Have fun with it! Take what we have provided (or not!) and run with it in whatever direction you see fit. 
 
 
 
