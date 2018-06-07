@@ -13,18 +13,26 @@ function concludeQuiz() {
 }
 
 function nextQuestion() {
+  // this gets the next prompt out of our quiz object (which we got from `seed.json`) and updates it on the dom
   var newPrompt = currQuiz.prompts[promptIdx]
   updatePrompt(newPrompt.promptText)
+  
   if (currQuiz.type === "text") {
     updateOptionsText(newPrompt.trueResponse, newPrompt.falseResponse)
   } else if (currQuiz.type === "img") {
     updateOptionsImg(newPrompt.trueResponse, newPrompt.falseResponse)
   }
+  
   promptIdx++
 }
 
 function answerHandler(selectedID) {
-  if (this.id === 'a') truesSelected++
+  // this executes whenever a user selects a specific option
+  if (this.id === 'true') {
+    truesSelected++
+  }
+  
+  // if we completed all of the prompts for the current quiz
   if (promptIdx === currQuiz.prompts.length) {
     concludeQuiz()
   } else {
@@ -33,26 +41,37 @@ function answerHandler(selectedID) {
 }
 
 function startQuiz(quizObj) {
+  // reset all of the quiz variables, update the title, and give the first question
   currQuiz = quizObj
   promptIdx = 0
   truesSelected = 0
-  nextQuestion()
   updateTitle(currQuiz.title)
+  nextQuestion()
 }
 
-(function answerListener() {
+function answerListener() {
+  // this listens for clicks on our user selectable options
   $(".option").click(answerHandler)
-})();
+}
 
-(function nextQuizListener() {
+function nextQuizListener() {
+  // this listens for clicks on our "Display next quiz?" button on the results page
   $("#next-quiz-button").click(() => {
-    currQuizIdx = (currQuizIdx === quizArr.length - 1) ? 0 : ++currQuizIdx
+    // if this was the last quiz in the collection, restart at the first one
+    if (currQuizIdx === quizArr.length - 1) {
+      currQuizIdx = 0
+    } else {
+      currQuizIdx++
+    }
+    
     hideResult()
     updateOptionsImg("", "")
     startQuiz(quizArr[currQuizIdx])
   })
-})()
+}
 
+answerListener()
+nextQuizListener()
 
 startQuiz(quizArr[0])
 

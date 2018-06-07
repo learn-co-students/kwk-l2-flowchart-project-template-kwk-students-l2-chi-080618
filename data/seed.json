@@ -1,10 +1,14 @@
 /* Create your tests here using either this, or a custom, JSON format
  * The JSON blob is imported in the HTML, making it accessible to our JS files
  *
- * Below are two examples 
+ * Below are two examples of quizzes with text, followed by a third that uses images
+ * If you are confused with how the quiz knows to use an image instead of text, 
+ * take a moment to locate the `key: value` in our JSON that we use to inficate
+ * this
 */
 
 quizBlobs = {
+  
   "goOut": {
     "title": "Should you go to the event tonight?",
     "type": "text",
@@ -26,6 +30,7 @@ quizBlobs = {
       "false": "You should stay in and relax. You deserve.",
     },
   },
+  
   "useAnimations": {
     "title": "Should you jazz up your app with css animations?",
     "type": "text",
@@ -57,6 +62,7 @@ quizBlobs = {
       "false": "Stylesheets are for humans. Unformatted text is for you.",
     }
   },
+  
   "hogNames": {
     "title": "Which hog is which?",
     "type": "img",

@@ -19,21 +19,79 @@ Following is a sample version of what the working code may look like in the brow
 For now, don't worry about the content or domain of your flow chart, you first have to implement the general functionality of the app before worrying about the content.
 
 
-## Let's Start Off Easy
+## Starter Code
+
+As usual, we don't want you spending too much time wrestling with the basic HTML or CSS: `index.css` and `index.html` have been populated with everything you may need to get a simple implementation working (with you just needing to program the JavaScript). That being said, this is your final project and you should take the initiative to make it look, and function, however you like! Think of the base code provided here to be only an outline, and use it as a jumping off point. 
+
+We have provided you with sample JavaScript code located in the `src/`. You will notice we have two files, which we use to split up responsibility (both are being imported in `index.html`):
+
+`src/domAdapter.js` contains our functions that do the actual _changing_ of the DOM. For example, `updatePrompt(str)` takes in a string as an argument and replaces the prompt `<div>`'s contents with that string. You will notice that there are **no** functions in `domAdapter.js` that handle the actual quizzing application logic!
+
+`src/quizzer.js` contains our functions that manage our application logic. They are responsible for starting the quiz, managing prompts and their user selected responses, and displaying results. Our quizzer app is getting all of its actual content (i.e. what the prompts are, what the provided answer options are, etc.) from the `data/seed.json` file. As you are now JSON experts, you should take a moment to get familiar with how we structured our JSON tree, because it is used in `quizzer.js`.
 
 
+#### Using the JSON Data
 
-### Themes
+As mentioned, the JSON file is the source of our actual quiz content, and `quizzer.js` is what is responsible for managing the delivery of that content (i.e. the quizzes themselves). If you look at the the first line in `quizzer.js`, you will see that we are grabbing all of the quiz objects from our JSON and placing them in an array (the function `Object.values(obj)` simply ignores the keys of an object and places all of the values into an array). For example:
+
+```js
+myObj = {
+  a: "hello",
+  b: "goodbye"
+}
+
+var arr = Object.values(myObj)
+console.log(arr)
+// > [ "hello", "goodbye" ]
+```
+
+Using this, we can have a neat array of quiz objects that have all the data we need to display and run them, be it their title, prompts, or quiz type.
 
 
+## Getting Started
 
-### Decision Tree Ideas
+We have provided only one basic implementation of this quiz idea. In our example, we check if the amount of 'true' responses for the quiz are greater than the 'trueThreshold'. When then display a result based on that. As it currently stands, our application functions similar to a pass/not-pass quiz. The user either selects enough 'true' answers, (or not), and a result is given based on that. As you can see, the starter code isn't a true implementation of a decision tree. It always asks the same amount of questions, and answering one way won't change the questions that follow. 
 
-In terms of the decision trees you can build, it can really be anything.
+Take a moment to run the code as is by opening `index.html`. For every event that you see or engage with on the DOM, go back to the code in `quizzer.js` and see what function it is controlling the user experience.
+
+
+## Your Job
+
+Ultimately, this is your final project, and you should take this in whatever direction most interests you! Following are a few ideas to get the creative juices flowing:
+
+---
+
+#### Expand the decision tree
+
+Instead of checking whether enough "true" answers were selected, expand your decision tree to have different follow up questions for different answers, i.e.:
+  
+Should I go out tonight?
+```
+  "Are you tired?" ('yes' or 'no')  
+    if yes --> "Do you lack sleep or are you worn out?" ('I lack sleep' or 'I'm worn out')  
+    if no  --> "Do you have any obligations tonight?" ('Yes!' or 'No!')
+```
+
+Here are a few starter ideas: 
 
 - What college should I go to?
 - What should I major in?
 - What movie should I watch tonight?
 - What should I do if I'm being bullied?
+---
 
-You can provide as many questions and results as you want. You can even build multiple quizzes in the same application.
+#### Turn it into an actual quiz
+
+Tally up the amount of correct answers and provide the user with a percentage score at the end of the quiz. For advanced implementations, give the questions different 'weights'. 
+
+---
+
+#### Expand on the image concept
+
+Instead of having a user select a specific image based only on a text prompt, lookup how to use an [HTML `<audio>` tag][audio] and play a sound when a prompt is updated (i.e. a lion's roar), and have them guess which answer prompt the sound is associated with (i.e. lion or tiger). 
+
+---
+
+
+
+[audio]: https://www.w3schools.com/html/html5_audio.asp
