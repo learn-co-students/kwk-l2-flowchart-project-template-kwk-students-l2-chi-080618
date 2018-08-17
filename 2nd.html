@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
+    <style>
+    
+      
+
+div.fixed {
+    position: relative;
+    left: 35%;
+    width: 400px;
+    border:outset;
+  background:white;
+}
+<!--       div.loop {
+        position: absolute;
+        left:20%;
+        width:125px;
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+       div.LWS {
+        position: absolute;
+       
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+      
+       div.NNS {
+        position: absolute;
+        
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+      
+      
+      
+       div.NWS {
+        position: absolute;
+        width:125px;
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+      
+       
+      
+      
+       div.WickerPark{
+        position: absolute;
+       
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+      
+     div.Westtown{
+        position: absolute;
+       
+        border:inset;
+        background:lightgrey;
+        text-align:center;
+         }
+       -->
+</style>
+  </head>
+  <body>
+   <br>
+    <br>
+    <br>
+    <div class="fixed">
+    <h1> Where do you want to go? Click on the map!</h1>
+      </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class = pictures>
+      <div class = pic1>
+    <a href="#" id = "west-town" onclick= "showDetails(1)">
+  <img src="https://farm2.staticflickr.com/1773/44072180581_a16379dce3_m.jpg"  title="West Town"></a></div>
+    
+    <div class = pic2>
+    <a href="#" id = "near-north" onclick= "showDetails(0)">
+      <img src="https://farm2.staticflickr.com/1795/30204544478_8102009223_m.jpg"> 
+      </a></div>
+    
+    <div class = pic3>
+   <a href="#" id = "river-north" onclick= "showDetails(2)">
+     <img src="https://farm2.staticflickr.com/1795/44072170921_2b16a40f1d_m.jpg"></a></div>
+    
+    <div class = pic4>
+    <a href="#" id="near-west" onclick= "showDetails(3)">
+      <img src="https://farm2.staticflickr.com/1774/44072166851_bba003c349_m.jpg" ></a></div>
+    
+    <div class = pic5>
+    <a href="#" id = "low-west" onclick= "showDetails(4)">
+     <img src="https://farm2.staticflickr.com/1817/42266137110_5fc731c10a_m.jpg" >
+      </a></div>
+    <div class = pic6>
+    <a href="#" id = "wicker" onclick= "showDetails(5)">
+      <img src="https://farm2.staticflickr.com/1776/30204554638_1aa7819058_n.jpg"></a></div>
+      
+   
+     <a href="#" id = "bro">
+       <img src="https://farm2.staticflickr.com/1796/30207043698_7584c7a441_m.jpg" ></a> </div>
+    <div class="deets">
+      <div id = "name"></div>
+      <div id = "place1"></div>
+      <div id = "place2"></div>
+      <div id = "place3"></div>
+    </div>
+   <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div id="accordionList" class="accordion">
+    <div class="accordion-item" id>
+      <div class="accordion-button">
+        <h3>
+          <div class="accordion-marker"><i class="fa fa-plus"></i></div><span id="person1" class="question">Thing #1</span>
+        </h3>
+      </div>
+      <p id="headline1">
+        text text text text text
+      </p>
+      <img id="picture1" class="photographer">
+      <a href id= "link1">Click on the photographer's profile here!</a>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-button">
+        <h3>
+          <div class="accordion-marker"><i class="fa fa-plus"></i></div><span id="person2" class="question">Thing #2</span>
+        </h3>
+      </div>
+      <p id="headline2">
+
+      </p>
+      <img id="picture2" class="photographer">
+      <a href id= "link2">Click on the photographer's profile here!</a>
+    </div>
+
+    <div class="portfolio"></div>
+    <div class="dropDown">
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    </div>
+    
+<body>
+	<script src="index.js"></script>
+</body>
+
+</html>
