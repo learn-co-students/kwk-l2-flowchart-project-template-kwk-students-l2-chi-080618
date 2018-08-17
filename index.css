@@ -1,98 +1,260 @@
-body, html {
-  width: 100%;
-  height: 100%;
-  background-color: #605;
-  font-family: arial;
-  text-align: center;
-  color: #aaa;
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 
-body {
-  animation: background-shimmer 20s forwards infinite;
+h1{text-align:center;
+  background:white;
+  width:400px;
+  
+  
 }
-
-body, div {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin: 0;
-}
-
-#main {
-  width: 90%;
-  height: 90%;
-  flex-direction: column;
-}
-
-#result-wrapper {
+body{
+background: linear-gradient(to bottom, #ffcccc 0%, #ffffff 67%);
+ background-repeat: no-repeat;
+    background-attachment: fixed;}
+#west-town{
   position: absolute;
-  flex-direction: column;
-  opacity: 0;
-  pointer-events: none;
-  width: 90%;
-  height: 90%;
-  background-color: #fa0;
-  text-align: center;
-  color: #333;
-  font-size: 6vw;
+  left: 23.5%;
+  top: 247px;
 }
 
-#result {
-  width: 100%;
-  height: 60%;
+#river-north {
+  position: absolute;
+  left: 40%;
+  top: 300px;
 }
 
-#next-quiz-button {
-  font-size: 4vw;
-  width: 80%;
-  height: 35%;
-  box-shadow: 2px 2px 0px 3px rgba(0,0,0,0.3);
+#near-north{
+  position: absolute;
+  left: 39.8%;
+  top: 235px;
+}
+
+#near-west{
+  position: absolute;
+  left: 23.783%;
+  top: 395px;
+}
+
+#wicker{
+  position: absolute;
+  top: 190px;
+  left: 24%;
+}
+
+#low-west{
+  position: absolute;
+  top: 461px;
+  left: 23.8%;
+}
+#bro{
+  position: absolute;
+  left: 40%;
+  top:486px;
+} 
+
+#title{
+  color: blue;
+}
+
+
+.pic1 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic1:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  z-index: 9999;
+}
+
+.pic2 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic2:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.pic3 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic3:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.pic4 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic4:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.pic5 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic5:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.pic6 img {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.pic6:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.deets{
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  width: 550px;
+  height: 100px;
+}
+
+.pictures{
+ 
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+.accordion {
+  width: 800px;
+  height: auto;
+  font-family: 'Archivo', sans-serif;
+}
+.accordion > div {
+  width: 800px;
   cursor: pointer;
 }
+.accordion-item {
+  width: 800px;
+}
+.accordion-button {
+  width: 800px;
+}
+.accordion-button h3 .question {
+  position: relative;
+  display: block;
+  color: #7fb0ff;
+  padding-top: 10px;
+  padding-left: 60px;
+  text-align: center;
+  font-family: 'Archivo', sans-serif;
 
-#next-quiz-button:hover {
-  box-shadow: inset 2px 2px 0px 4px rgba(0,0,0,0.3);
+}
+.accordion h3 {
+  width: 1600px;
+  height: 50px;
+  margin: 9px;
+  font-size: 25px;
+  background-color: #fff9fd;
+  border: 1px solid #e2ecf0;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.accordion-marker {
+  width: 48px;
+  height: 100%;
+  float: left;
+  color: #3d87ff;
+  font-size: 30px;
+  border-right: 1px solid #e2ecf0;
+}
+.accordion-marker i {
+  padding-top: 10px;
+  padding-left: 12px;
+}
+.accordion-marker .fa-plus {
+  color: #3d87ff;
+}
+.accordion p {
+  width: 400px;
+  max-height: 0;
+  margin: 0px 0px 0px 70px;
+  font-size: 20px;
+  color: #9aa7af;
+  overflow: hidden;
+  transition: max-height 350ms ease-in-out;
+}
+.accordion > div.active .accordion-marker {
+  background-color: #21c2f8;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.accordion > div.active .question {
+  color: #000;
+}
+.accordion > div.active .accordion-marker .fa-minus {
+  color: #fff;
+}
+.accordion > div.active p {
+  max-height: 200px;
+}
+
+#accordionList {
+  display: none;
+  margin-top: 450px;
+}
+
+.photographer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  width: 50%;
+  height: 50%;
+  margin-left: 625px;
+}
+}
+#headline1
+{
+  text-align: center;
+}
+
+#link1
+{
+  position: absolute;
+  margin-left: 680px;
+  text-align: center;
   
 }
 
-#title {
-  color: #a50;
-  font-size: 5vw;
-  width: 100%;
-}
 
-#prompt {
-  font-size: 6vw;
-  width: 100%;
-  height: 40%;
-  margin: 5% 0%;
-}
-
-#selector-wrapper {
-  flex-direction: row;
-  width: 100%;
-  height: 45%;
-  justify-content: space-around;
-}
-
-.option {
-  font-size: 30pt;
-  width: 45%;
-  height: 100%;
-  box-shadow: 2px 2px 0px 3px rgba(0,0,0,0.3);
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.option:hover {
-  box-shadow: inset 2px 2px 0px 4px rgba(0,0,0,0.3);
-}
-
-@keyframes background-shimmer {
-  0% { background-color: #605 }
-  33.3% { background-color: #523 }
-  66.6% { background-color: #424 }
-  100% { background-color: #605 }
+#link2
+{
+  position: absolute;
+  margin-left: 700px;
+  text-align: center;
+  
 }
